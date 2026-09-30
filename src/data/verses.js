@@ -110,3 +110,5 @@ const verses = [
     VerseImage: "https://picsum.photos/seed/heb111/400/300",
   },
 ];
+
+export default verses;
