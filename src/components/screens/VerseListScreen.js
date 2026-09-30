@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import Screen from "../layout/Screen.js";
 
 import initialVerses from "../../data/verses.js";
@@ -9,17 +9,21 @@ export const VerseListScreen = () => {
 
   // State ----------------------------------
   // Handlers -------------------------------
+  const handleSelect = () => alert("Item selected"); // anon: if called, will call alert
+
   // View -----------------------------------
   return (
     <Screen>
       <ScrollView style={styles.container}>
         {verses.map((verse) => {
           return (
-            <View key={verse.VerseID} style={styles.item}>
-              <Text style={styles.text}>
-                {verse.VerseBookName} {verse.VerseChapter}:{verse.VerseNumber}
-              </Text>
-            </View>
+            <Pressable key={verse.VerseID} onPress={handleSelect}>
+              <View style={styles.item}>
+                <Text style={styles.text}>
+                  {verse.VerseBookName} {verse.VerseChapter}:{verse.VerseNumber}
+                </Text>
+              </View>
+            </Pressable>
           );
         })}
       </ScrollView>
