@@ -1,18 +1,18 @@
 import { StyleSheet, Text } from "react-native";
 import Screen from "../layout/Screen.js";
 
-export const BookModifyScreen = () => {
+export const VerseViewScreen = () => {
   // Initialisation -------------------------
   // State ----------------------------------
   // Handlers -------------------------------
   // View -----------------------------------
   return (
     <Screen>
-      <Text>Modify</Text>
+      <Text>View</Text>
     </Screen>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default BookModifyScreen;
+export default VerseViewScreen;

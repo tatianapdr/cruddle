@@ -1,9 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import BookListScreen from "./src/components/screens/BookListScreen";
-import BookAddScreen from "./src/components/screens/BookAddScreen";
-import BookViewScreen from "./src/components/screens/BookViewScreen";
-import BookModifyScreen from "./src/components/screens/BookModifyScreen";
+import VerseListScreen from "./src/components/screens/VerseListScreen";
+import VerseAddScreen from "./src/components/screens/VerseAddScreen";
+import VerseViewScreen from "./src/components/screens/VerseViewScreen";
+import VerseModifyScreen from "./src/components/screens/VerseModifyScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,31 +15,31 @@ export const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="BookListScreen"
+        initialRouteName="VerseListScreen"
         screenOptions={{
           headerStyle: { backgroundColor: "black" },
           headerTintColor: "white",
         }}
       >
         <Stack.Screen
-          name="BookListScreen"
-          component={BookListScreen}
-          options={{ title: "List Books" }}
+          name="VerseListScreen"
+          component={VerseListScreen}
+          options={{ title: "List Verses" }}
         />
         <Stack.Screen
-          name="BookAddScreen"
-          component={BookAddScreen}
-          options={{ title: "Add Books" }}
+          name="VerseAddScreen"
+          component={VerseAddScreen}
+          options={{ title: "Add Verses" }}
         />
         <Stack.Screen
-          name="BookViewScreen"
-          component={BookViewScreen}
-          options={{ title: "View Books" }}
+          name="VerseViewScreen"
+          component={VerseViewScreen}
+          options={{ title: "View Verses" }}
         />
         <Stack.Screen
-          name="BookModifyScreen"
-          component={BookModifyScreen}
-          options={{ title: "Modify Books" }}
+          name="VerseModifyScreen"
+          component={VerseModifyScreen}
+          options={{ title: "Modify Verses" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

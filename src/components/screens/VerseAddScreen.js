@@ -1,7 +1,7 @@
 import { StyleSheet, Text } from "react-native";
 import Screen from "../layout/Screen.js";
 
-export const BookAddScreen = () => {
+export const VerseAddScreen = () => {
   // Initialisation -------------------------
   // State ----------------------------------
   // Handlers -------------------------------
@@ -15,4 +15,4 @@ export const BookAddScreen = () => {
 
 const styles = StyleSheet.create({});
 
-export default BookAddScreen;
+export default VerseAddScreen;
