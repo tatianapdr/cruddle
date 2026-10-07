@@ -1,7 +1,7 @@
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import Screen from "../layout/Screen.js";
-
-import initialModules from "../../data/modules.js";
+import { ScrollView, StyleSheet } from 'react-native';
+import Screen from '../layout/Screen.js';
+import initialModules from '../../data/modules.js';
+import ModuleItem from '../entity/modules/ModuleItem.js';
 
 export const ModuleListScreen = () => {
   // Initialisation -------------------------
@@ -9,22 +9,14 @@ export const ModuleListScreen = () => {
 
   // State ----------------------------------
   // Handlers -------------------------------
-  const handleSelect = () => alert("Item selected"); // anon: if called, will call alert
+  const handleSelect = () => alert('Item selected'); // anon: if called, will call alert
 
   // View -----------------------------------
   return (
     <Screen>
       <ScrollView style={styles.container}>
         {modules.map((module) => {
-          return (
-            <Pressable key={module.ModuleID} onPress={handleSelect}>
-              <View style={styles.item}>
-                <Text style={styles.text}>
-                  {module.ModuleCode} {module.ModuleName}
-                </Text>
-              </View>
-            </Pressable>
-          );
+          return <ModuleItem key={module.ModuleID} module={module} onSelect={handleSelect} />;
         })}
       </ScrollView>
     </Screen>
@@ -33,14 +25,6 @@ export const ModuleListScreen = () => {
 
 const styles = StyleSheet.create({
   container: {},
-  item: {
-    paddingVertical: 15,
-    borderTopWidth: 1,
-    borderColor: "lightgray",
-  },
-  text: {
-    fontSize: 16,
-  },
 });
 
 export default ModuleListScreen;
