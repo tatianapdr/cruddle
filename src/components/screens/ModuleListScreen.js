@@ -1,11 +1,11 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import Screen from "../layout/Screen.js";
 
-import initialVerses from "../../data/verses.js";
+import initialModules from "../../data/modules.js";
 
-export const VerseListScreen = () => {
+export const ModuleListScreen = () => {
   // Initialisation -------------------------
-  const verses = initialVerses;
+  const modules = initialModules;
 
   // State ----------------------------------
   // Handlers -------------------------------
@@ -15,12 +15,12 @@ export const VerseListScreen = () => {
   return (
     <Screen>
       <ScrollView style={styles.container}>
-        {verses.map((verse) => {
+        {modules.map((module) => {
           return (
-            <Pressable key={verse.VerseID} onPress={handleSelect}>
+            <Pressable key={module.ModuleID} onPress={handleSelect}>
               <View style={styles.item}>
                 <Text style={styles.text}>
-                  {verse.VerseBookName} {verse.VerseChapter}:{verse.VerseNumber}
+                  {module.ModuleCode} {module.ModuleName}
                 </Text>
               </View>
             </Pressable>
@@ -43,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default VerseListScreen;
+export default ModuleListScreen;

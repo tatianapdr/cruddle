@@ -1,7 +1,7 @@
 import { StyleSheet, Text } from "react-native";
 import Screen from "../layout/Screen.js";
 
-export const VerseViewScreen = () => {
+export const ModuleViewScreen = () => {
   // Initialisation -------------------------
   // State ----------------------------------
   // Handlers -------------------------------
@@ -15,4 +15,4 @@ export const VerseViewScreen = () => {
 
 const styles = StyleSheet.create({});
 
-export default VerseViewScreen;
+export default ModuleViewScreen;

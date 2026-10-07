@@ -1,18 +1,18 @@
 import { StyleSheet, Text } from "react-native";
 import Screen from "../layout/Screen.js";
 
-export const VerseAddScreen = () => {
+export const ModuleModifyScreen = () => {
   // Initialisation -------------------------
   // State ----------------------------------
   // Handlers -------------------------------
   // View -----------------------------------
   return (
     <Screen>
-      <Text>Add</Text>
+      <Text>Modify</Text>
     </Screen>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default VerseAddScreen;
+export default ModuleModifyScreen;

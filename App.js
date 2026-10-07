@@ -1,9 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import VerseListScreen from "./src/components/screens/VerseListScreen";
-import VerseAddScreen from "./src/components/screens/VerseAddScreen";
-import VerseViewScreen from "./src/components/screens/VerseViewScreen";
-import VerseModifyScreen from "./src/components/screens/VerseModifyScreen";
+import ModuleListScreen from "./src/components/screens/ModuleListScreen";
+import ModuleAddScreen from "./src/components/screens/ModuleAddScreen";
+import ModuleViewScreen from "./src/components/screens/ModuleViewScreen";
+import ModuleModifyScreen from "./src/components/screens/ModuleModifyScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,31 +15,31 @@ export const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="VerseListScreen"
+        initialRouteName="ModuleListScreen"
         screenOptions={{
           headerStyle: { backgroundColor: "black" },
           headerTintColor: "white",
         }}
       >
         <Stack.Screen
-          name="VerseListScreen"
-          component={VerseListScreen}
-          options={{ title: "List Verses" }}
+          name="ModuleListScreen"
+          component={ModuleListScreen}
+          options={{ title: "List Modules" }}
         />
         <Stack.Screen
-          name="VerseAddScreen"
-          component={VerseAddScreen}
-          options={{ title: "Add Verses" }}
+          name="ModuleAddScreen"
+          component={ModuleAddScreen}
+          options={{ title: "Add Modules" }}
         />
         <Stack.Screen
-          name="VerseViewScreen"
-          component={VerseViewScreen}
-          options={{ title: "View Verses" }}
+          name="ModuleViewScreen"
+          component={ModuleViewScreen}
+          options={{ title: "View Modules" }}
         />
         <Stack.Screen
-          name="VerseModifyScreen"
-          component={VerseModifyScreen}
-          options={{ title: "Modify Verses" }}
+          name="ModuleModifyScreen"
+          component={ModuleModifyScreen}
+          options={{ title: "Modify Modules" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
