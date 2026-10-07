@@ -1,7 +1,7 @@
-import { ScrollView, StyleSheet } from 'react-native';
-import Screen from '../layout/Screen.js';
+import { StyleSheet } from 'react-native';
 import initialModules from '../../data/modules.js';
-import ModuleItem from '../entity/modules/ModuleItem.js';
+import Screen from '../layout/Screen.js';
+import ModuleList from '../entity/modules/ModuleList.js';
 
 export const ModuleListScreen = () => {
   // Initialisation -------------------------
@@ -9,16 +9,12 @@ export const ModuleListScreen = () => {
 
   // State ----------------------------------
   // Handlers -------------------------------
-  const handleSelect = () => alert('Item selected'); // anon: if called, will call alert
+  const handleSelect = (module) => alert(`Item ${module.ModuleCode} selected`); // anon: if called, will call alert
 
   // View -----------------------------------
   return (
     <Screen>
-      <ScrollView style={styles.container}>
-        {modules.map((module) => {
-          return <ModuleItem key={module.ModuleID} module={module} onSelect={handleSelect} />;
-        })}
-      </ScrollView>
+      <ModuleList modules={modules} onSelect={handleSelect} />
     </Screen>
   );
 };
