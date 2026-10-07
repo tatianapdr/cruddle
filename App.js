@@ -1,9 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import BookListScreen from "./src/components/screens/BookListScreen";
-import BookAddScreen from "./src/components/screens/BookAddScreen";
-import BookViewScreen from "./src/components/screens/BookViewScreen";
-import BookModifyScreen from "./src/components/screens/BookModifyScreen";
+import ModuleListScreen from "./src/components/screens/ModuleListScreen";
+import ModuleAddScreen from "./src/components/screens/ModuleAddScreen";
+import ModuleViewScreen from "./src/components/screens/ModuleViewScreen";
+import ModuleModifyScreen from "./src/components/screens/ModuleModifyScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,31 +15,31 @@ export const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="BookListScreen"
+        initialRouteName="ModuleListScreen"
         screenOptions={{
           headerStyle: { backgroundColor: "black" },
           headerTintColor: "white",
         }}
       >
         <Stack.Screen
-          name="BookListScreen"
-          component={BookListScreen}
-          options={{ title: "List Books" }}
+          name="ModuleListScreen"
+          component={ModuleListScreen}
+          options={{ title: "List Modules" }}
         />
         <Stack.Screen
-          name="BookAddScreen"
-          component={BookAddScreen}
-          options={{ title: "Add Books" }}
+          name="ModuleAddScreen"
+          component={ModuleAddScreen}
+          options={{ title: "Add Modules" }}
         />
         <Stack.Screen
-          name="BookViewScreen"
-          component={BookViewScreen}
-          options={{ title: "View Books" }}
+          name="ModuleViewScreen"
+          component={ModuleViewScreen}
+          options={{ title: "View Modules" }}
         />
         <Stack.Screen
-          name="BookModifyScreen"
-          component={BookModifyScreen}
-          options={{ title: "Modify Books" }}
+          name="ModuleModifyScreen"
+          component={ModuleModifyScreen}
+          options={{ title: "Modify Modules" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
