@@ -1,5 +1,6 @@
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet } from 'react-native';
 import Screen from '../layout/Screen.js';
+import ModuleView from '../entity/modules/ModuleView.js';
 
 export const ModuleViewScreen = ({ navigate, route }) => {
   // Initialisation -------------------------
@@ -9,10 +10,7 @@ export const ModuleViewScreen = ({ navigate, route }) => {
   // View -----------------------------------
   return (
     <Screen>
-      <Text>
-        View {module.ModuleCode} {module.ModuleName}
-      </Text>
-      <Text>Level {module.ModuleLevel}</Text>
+      <ModuleView module={module} />
     </Screen>
   );
 };
