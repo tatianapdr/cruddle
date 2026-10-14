@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import FullWidthImage from 'react-native-fullwidth-image';
-import { ButtonTray, Button } from '../../UI/Button';
+import Icons from '../../UI/Icons.js';
+import { ButtonTray, Button } from '../../UI/Button.js';
 
 const ModuleView = ({ module }) => {
   // Initialisation -------------------------
@@ -22,8 +23,8 @@ const ModuleView = ({ module }) => {
       </View>
 
       <ButtonTray>
-        <Button label='Modify' />
-        <Button label='Delete' />
+        <Button icon={<Icons.Edit />} label='Modify' />
+        <Button icon={<Icons.Delete />} label='Delete' styleButton={{ backgroundColor: 'mistyrose' }} styleLabel={{ color: 'red' }} />
       </ButtonTray>
     </View>
   );
